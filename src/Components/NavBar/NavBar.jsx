@@ -1,12 +1,13 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
     const links = <>
-         <li><a>Home</a></li>
-         <li><a>Item 3</a></li>
+         <li><NavLink to='/' className={({isActive})=> isActive ? "border border-green-500": ""}>Home</NavLink></li>
+         <li><NavLink to='dashboard' className={({isActive})=> isActive ? "border border-green-500": ""}>Dashboard</NavLink></li>
     </>
     return (
-        <div className="navbar bg-base-100">
+  <div className="navbar bg-base-100">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -29,16 +30,16 @@ const NavBar = () => {
         {links}
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">Book-Store</a>
+    <a className="btn btn-ghost text-2xl font-bold text-green-500 border border-green-500">Book-Store</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
     {links}
     </ul>
   </div>
-  <div className="navbar-end">
-    <a className="btn">SignUp</a>
-    <a className="btn">LogIn</a>
+  <div className="navbar-end gap-4">
+    <a className="btn bg-green-500 text-white text-xl">SignUp</a>
+    <a className="btn bg-cyan-500 text-white text-xl">LogIn</a>
   </div>
 </div>
     );
