@@ -20,4 +20,4 @@ const saveDataList = (id)=>{
     }
 }
 
-export {saveDataList}
+export {saveDataList, getStoredData}

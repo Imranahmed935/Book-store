@@ -4,7 +4,8 @@ import { NavLink } from 'react-router-dom';
 const NavBar = () => {
     const links = <>
          <li><NavLink to='/' className={({isActive})=> isActive ? "border border-green-500": ""}>Home</NavLink></li>
-         <li><NavLink to='dashboard' className={({isActive})=> isActive ? "border border-green-500": ""}>Dashboard</NavLink></li>
+         <li><NavLink to='dashboard' className={({isActive})=> isActive ? "border border-green-500": ""}>dashboard</NavLink></li>
+         <li><NavLink to='bookList' className={({isActive})=> isActive ? "border border-green-500": ""}>Book list</NavLink></li>
     </>
     return (
   <div className="navbar bg-base-100">
